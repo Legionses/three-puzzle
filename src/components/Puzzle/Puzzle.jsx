@@ -46,12 +46,12 @@ const Puzzle = () => {
     },[])
 
     return (
-        <group position={[-5, 5, 0]}>
+        <group position={[0, 0, 0]}>
             {
                 canvases.map((row, rowInd) =>
                     row.map((canvas, col) => (
-                    <mesh position={[col * 5, -(rowInd * 5), 0]}>
-                        <planeGeometry args={[5,5]} />
+                    <mesh position={[(col * 2) - 2, -(rowInd * 2) + 2, 0]}>
+                        <planeGeometry args={[2,2]} />
                         <meshBasicMaterial color="red" >
                             <canvasTexture
                                 attach="map"

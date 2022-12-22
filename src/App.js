@@ -1,6 +1,6 @@
 import './App.css';
 import { Canvas } from "@react-three/fiber";
-import Puzzle from "./components/Puzzle/Puzzle";
+import Puzzle from "./components/Puzzle";
 import { OrbitControls } from "@react-three/drei";
 
 function App() {
