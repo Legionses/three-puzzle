@@ -1,10 +1,19 @@
 import './App.css';
+import { Canvas } from "@react-three/fiber";
+import Puzzle from "./components/Puzzle/Puzzle";
+import { OrbitControls } from "@react-three/drei";
 
 function App() {
   return (
-    <div className="App">
-hi
-    </div>
+    <section className="App">
+        <Canvas>
+            <axesHelper/>
+            <OrbitControls />
+            <ambientLight />
+            <pointLight position={[10, 10, 10]} />
+            <Puzzle/>
+        </Canvas>
+    </section>
   );
 }
 
