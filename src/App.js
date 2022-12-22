@@ -1,7 +1,8 @@
 import './App.css';
 import { Canvas } from "@react-three/fiber";
-import Puzzle from "./components/Puzzle";
 import { OrbitControls } from "@react-three/drei";
+import Puzzle from "./components/Puzzle";
+import PuzzleBox from "./components/PuzzleBox";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
             <ambientLight />
             <pointLight position={[10, 10, 10]} />
             <Puzzle/>
+            <PuzzleBox/>
         </Canvas>
     </section>
   );

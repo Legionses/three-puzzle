@@ -1,6 +1,4 @@
-import React, {useEffect, useState} from "react"
-import { useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three/src/loaders/TextureLoader";
+import { useEffect, useState} from "react"
 
 const Puzzle = () => {
     const [canvases, setCanvases] = useState([]);
@@ -50,7 +48,7 @@ const Puzzle = () => {
             {
                 canvases.map((row, rowInd) =>
                     row.map((canvas, col) => (
-                    <mesh position={[(col * 2) - 2, -(rowInd * 2) + 2, 0]}>
+                    <mesh key={`${row}${col}`} position={[(col * 2) - 2, -(rowInd * 2) + 2, 0]}>
                         <planeGeometry args={[2,2]} />
                         <meshBasicMaterial color="red" >
                             <canvasTexture
