@@ -1,8 +1,34 @@
 .container {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
-  width: 150px;
+  width: 350px;
   height: 100%;
-  background-color: red;
+  background-color: rgba(75, 116, 146, 0.49);
+  overflow: auto;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  height: fit-content;
+  padding: 16px 0;
+
+  &Item {
+    border: 2px solid white;
+    border-radius: 12px;
+    width: 300px;
+    height: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
 }

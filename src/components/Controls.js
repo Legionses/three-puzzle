@@ -1,5 +1,5 @@
 import {OrbitControls} from "@react-three/drei";
-import React, {useRef, useState} from "react";
+import React, { useRef, useState } from "react";
 
 export const controlContext = React.createContext({});
 
