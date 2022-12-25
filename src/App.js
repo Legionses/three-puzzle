@@ -1,19 +1,22 @@
 import './App.css';
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
 import Puzzle from "./components/Puzzle";
 import PuzzleBox from "./components/PuzzleBox";
+import Controls from "./components/Controls";
+import Sidebar from "./components/Sidebar";
 
 function App() {
   return (
     <section className="App">
+        <Sidebar/>
         <Canvas>
-            <axesHelper/>
-            <OrbitControls />
-            <ambientLight />
-            <pointLight position={[10, 10, 10]} />
-            <Puzzle/>
-            <PuzzleBox/>
+            <Controls>
+                <axesHelper/>
+                <ambientLight />
+                <pointLight position={[10, 10, 10]} />
+                <Puzzle/>
+                <PuzzleBox/>
+                </Controls>
         </Canvas>
     </section>
   );

@@ -31,7 +31,7 @@ const Edge = ({width = 8.5, height = 8, deep = 0.5, position}) => (
 
 const PuzzleBox = () => {
     return(
-        <group position={[0,0,1]} scale={[0.5, 0.5, 0.5]}>
+        <group position={[2,0,0]} scale={[0.5, 0.5, 0.5]}>
             <mesh>
                 <boxGeometry args={[8, 8, 0.35]}/>
                 <BoxMaterial/>

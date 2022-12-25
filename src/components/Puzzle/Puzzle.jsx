@@ -1,5 +1,7 @@
 import { useEffect, useState} from "react"
+import Segment from "./components/Segment";
 
+const segmentSize = 1.3;
 const Puzzle = () => {
     const [canvases, setCanvases] = useState([]);
 
@@ -48,15 +50,12 @@ const Puzzle = () => {
             {
                 canvases.map((row, rowInd) =>
                     row.map((canvas, col) => (
-                    <mesh key={`${row}${col}`} position={[(col * 2) - 2, -(rowInd * 2) + 2, 0]}>
-                        <planeGeometry args={[2,2]} />
-                        <meshBasicMaterial color="red" >
-                            <canvasTexture
-                                attach="map"
-                                image={canvas}
+                            <Segment
+                                key={`${row}${col}`}
+                                position={[(col * segmentSize) - segmentSize, -(rowInd * segmentSize) + segmentSize, 0]}
+                                img={canvas}
+                                size={segmentSize}
                             />
-                        </meshBasicMaterial>
-                    </mesh>
                         )
                     )
                 )
